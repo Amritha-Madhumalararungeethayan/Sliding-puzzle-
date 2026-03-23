@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Password Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        #passwords {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Password Generator</h1>
+    <p id="passwords">Click the button to generate a password!</p>
+    <button id="generateBtn">Generate Password</button>
+
+    <script>
+        const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~`!@#$%^&*()_-+={[}],|:;<>.?/".split('');
+        const PasswordLength = 7;
+
+        function getRandomChar() {
+            const index = Math.floor(Math.random() * characters.length);
+            return characters[index];
+        }
+
+        function generateRandomPassword() {
+            let password = "";
+            for (let i = 0; i < PasswordLength; i++) {
+                password += getRandomChar();
+            }
+            document.getElementById("passwords").textContent = "Here is your password: " + password;
+        }
+
+        // Add click event to button
+        document.getElementById("generateBtn").addEventListener("click", generateRandomPassword);
+    </script>
+
+</body>
+</html>
