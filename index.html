@@ -7,21 +7,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="cover-screen" id="coverScreen">
+    <h2>Sliding Puzzle Game</h2>
+    <p id="result">Click start to play!</p>
+    <button id="startBtn">Start Game</button>
+  </div>
 
-    <!-- Start / Cover Screen -->
-    <div class="cover-screen" id="coverScreen">
-        <h2>Sliding Puzzle Game</h2>
-        <p id="result">Click start to play!</p>
-        <button id="startBtn">Start Game</button>
-    </div>
+  <div class="container"></div>
+  <div id="moves">Moves: 0</div>
 
-    <!-- Puzzle Grid -->
-    <div class="container"></div>
-
-    <!-- Move Counter -->
-    <div id="moves">Moves: 0</div>
-
- 
-    <script src="puzzle.js"></script>
+  <script src="puzzle.js" defer></script>
 </body>
 </html>
