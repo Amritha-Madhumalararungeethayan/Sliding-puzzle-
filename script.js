@@ -128,22 +128,18 @@ const handleTileClick =(e) =>
 
 }
 window.onload = () => {
-    startScreen.classList.remove("hide");
-    puzzleContainer.classList.add("hide");
+    const startButton = document.getElementById("startBtn");
+    const startScreen = document.getElementById("coverScreen");
+    const puzzleContainer = document.querySelector(".container");
 
     startButton.addEventListener("click", () => {
         puzzleContainer.innerHTML = "";
-        tileOrder = [];
         generateShuffledTiles();
         createGrid();
-        moveCount = 0;
-        movesDisplay.innerText = `moves : ${moveCount}`;
-
-        puzzleContainer.classList.remove("hide");
         startScreen.classList.add("hide");
+        puzzleContainer.classList.remove("hide");
     });
 };
-
 
 
 
