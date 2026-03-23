@@ -130,12 +130,7 @@ const handleTileClick =(e) =>
   window.onload = () => {
   startScreen.classList.remove("hide");
   puzzleContainer.classList.add("hide");
-};
-
-
-
-
- startButton.addEventListener("click", () =>{
+       startButton.addEventListener("click", () =>{
         puzzleContainer.classList.remove("hide");
         startScreen.classList.add("hide");
         puzzleContainer.innerHTML ="";
@@ -145,3 +140,9 @@ const handleTileClick =(e) =>
         moveCount = 0 ; 
        movesDisplay.innerText = `moves : ${moveCount}`;
     });
+
+};
+
+
+
+
