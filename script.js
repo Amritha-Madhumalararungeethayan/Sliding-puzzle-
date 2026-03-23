@@ -127,20 +127,21 @@ const handleTileClick =(e) =>
 
 
 }
-  window.onload = () => {
-  startScreen.classList.remove("hide");
-  puzzleContainer.classList.add("hide");
-       startButton.addEventListener("click", () =>{
-        puzzleContainer.classList.remove("hide");
-        startScreen.classList.add("hide");
-        puzzleContainer.innerHTML ="";
-        tileOrder =[];
+window.onload = () => {
+    startScreen.classList.remove("hide");
+    puzzleContainer.classList.add("hide");
+
+    startButton.addEventListener("click", () => {
+        puzzleContainer.innerHTML = "";
+        tileOrder = [];
         generateShuffledTiles();
         createGrid();
-        moveCount = 0 ; 
-       movesDisplay.innerText = `moves : ${moveCount}`;
-    });
+        moveCount = 0;
+        movesDisplay.innerText = `moves : ${moveCount}`;
 
+        puzzleContainer.classList.remove("hide");
+        startScreen.classList.add("hide");
+    });
 };
 
 
