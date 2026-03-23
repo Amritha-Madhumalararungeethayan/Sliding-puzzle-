@@ -1,0 +1,71 @@
+/* Center everything and basic font */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cover screen / start menu */
+.cover-screen {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+.hide {
+    display: none;
+}
+
+/* Puzzle container grid */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/* Individual cell */
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f0f0;
+}
+
+/* Puzzle tile image */
+.tile {
+    width: 90px;
+    height: 90px;
+    cursor: pointer;
+}
+
+/* Blank tile is invisible */
+.blank {
+    visibility: hidden;
+}
+
+/* Move counter */
+#moves {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+/* Start button styling */
+#startBtn {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin-top: 20px;
+    cursor: pointer;
+}
